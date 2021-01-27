@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  div(class="content-wraper")
+    section(class="content__reservation" id="1")
+      h3(class="descr") Забранировать столик
+      form#guest_form(method='POST' action='/reservation/c')
+        div#first_name_wrapper
+          label#first_name_label(for="first_name" class="descr") Имя:
+          input#first_name(type='text', placeholder='Ваше имя', name='name', required='true', value=(undefined===reservation ? '' : reservation.name))
+        div#phone_wrapper
+          label#phone_label(for="phone" class="descr") Номер телефона:
+          input#phone_input(type='tel', placeholder='81234567890', name='phone',pattern="[0-9]{11}", required='true', value=(undefined===reservation ? '' : reservation.phone))
+        div#date_wrapper
+          label#date_label(for="date_of_reservation" class="descr") Планируемая дата бронирования:
+          input#date_input(type="date", name="date_of_reservation", required='true', value=(undefined===reservation ? '' : reservation.date))
+        div(class="descr") Номер столика:
+          select#sel_tabl(name='select', required='true')
+            option(value='1') 1
+            option(value='2') 2
+            option(value='3') 3
+            option(value='4') 4
+            option(value='5') 5
+            option(value='6') 6
+            option(value='7') 7
+            option(value='8') 8
+            option(value='9') 9
+            option(value='10') 10
+            option(value='11') 11
+        if errors
+            for error in errors
+              div(style='color:  rgb(194, 108, 51);')= error
+        button#submitter(type='submit') Отправить
+    img(class="plan" src="../images/plan.jpg", alt="план расстановки столов")
+  footer
+    div(class="footer-element emails")
+      div(class="write-us") Наши контакты:
+        a(class="ref-email" href="") best@bar.ru
+        a(class="ref-email" href="") my@bar.ru
+        a(class="ref-email" href="") +7 (777) 777-77-77
+    div(class="footer-element") &copy; 2020 ООО«Мой бар»
+  script(src="/javascripts/selectTable.js" type="text/javascript").

@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      div(class="header-wraper")
+        span(class="bar-name") Мой Бар
+        a(href='/home') главная
+        a(href="/menu") меню
+        a(href="/reservation") забронировать столик
+        a(href="/feedback") отзывы
+    div(class="gap")
+    block content

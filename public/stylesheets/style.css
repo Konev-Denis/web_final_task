@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+  background-color: rgb(10, 27, 44);
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid burlywood;
+}
+
+.header-wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: rgb(10, 27, 44);
+}
+
+.content-wraper {
+  background-color: rgb(10, 27, 44);
+  padding: 10px;
+  text-align: center;
+}
+
+.content__section,
+.content__reservation {
+  text-align: center;
+}
+
+.header-wraper > a,
+.bar-name {
+  color: rgb(190,172,116);
+  font-size: large;
+}
+
+.descr {
+  color: rgb(190,172,116);
+}
+
+.bar-name {
+  text-shadow: 2px 2px 2px rgb(168, 144, 72),
+	2px 4px 9px rgb(168, 144, 72),
+	2px 5px 2px rgb(168, 144, 72);
+}
+
+.plan{
+  padding: 20px;
+}
+
+a:hover {
+  text-shadow: 0px 0px 10px rgb(51, 255, 0);
+}
+
+.bar-img {
+  width: 100%;
+}
+
+.content-wraper-reservation {
+  height: 100%;
+}
+
+.delete-reservation {
+  margin: 10px;
+}
+
+footer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: rgb(10, 27, 44);
+  position: fixed;
+  bottom: 0;
+}
+.footer-element{
+  margin: 10px 20px;
+  color: rgb(190,172,116);
+}
+.ref-email{
+  color: #4c4cd8;
+}
+.ref-email::before{
+    content: '';
+    display: inline-block;
+    background-size: cover;
+    width: 13px;
+    height: 13px;
+}
+.emails{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.gap {
+  height: 41px;
+}
+
+.none {
+  display: none;
+}

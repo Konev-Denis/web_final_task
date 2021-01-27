@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  main
+    if reservation
+      div(class="content-wraper")
+        section(class="content__reservation")
+          h3(class="descr") Ваша бронь
+          div(class="descr")= "Идентификационный номер: " + reservation._id
+          div(class="descr")= "Имя: " + reservation.name
+          div(class="descr")= "Телефон: " + reservation.phone
+          div(class="descr")= 'Дата брони: ' + reservation.date
+          div(class="descr")= "Номер столика: " + reservation.table
+        div(class="delete-reservation")
+          form(action='/reservation/delete' method="POST")
+            input(class="none" type='text', name='id', required='true', value=reservation._id)
+            button(type='submit') Отменить бронь
+  footer
+    div(class="footer-element emails")
+      div(class="write-us") Наши контакты:
+        a(class="ref-email" href="") best@bar.ru
+        a(class="ref-email" href="") my@bar.ru
+        a(class="ref-email" href="") +7 (777) 777-77-77
+    div(class="footer-element") &copy; 2020 ООО«Мой бар»
